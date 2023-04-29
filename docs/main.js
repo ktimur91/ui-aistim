@@ -4,7 +4,7 @@ import App from './App.vue'
 import router from './router'
 
 import * as components from '../src/components'
-import '../src/scss/ui-kit.scss'
+import '../src/scss/ui-aistim.scss'
 import './assets/main.scss'
 
 const app = createApp(App)
