@@ -1,0 +1,63 @@
+.form-switch {
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    cursor: pointer;
+
+    &-switch {
+      display: block;
+      background-color: var(--form-ed);
+      border: var(--b1);
+      width: 34px;
+      height: 20px;
+      border-radius: 100px;
+      position: relative;
+      transition: 0.3s;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 3px;
+        top: 3px;
+        bottom: 2px;
+        width: 12px;
+        height: 12px;
+        background-color: var(--box);
+        // box-shadow: 0 0 0 1px var(--bcolor);
+        border-radius: 100px;
+        transition: 0.3s;
+      }
+
+      &.active {
+        background-color: var(--primary);
+        transition: 0.3s;
+      }
+      &.active::before {
+        left: 17px;
+        // box-shadow: none;
+        transition: 0.3s;
+      }
+    }
+
+    &-text {
+      color: #999;
+
+      &:hover,
+      &.active {
+        color: var(--text);
+      }
+    }
+
+    &.hovered {
+      &:hover {
+        background-color: var(--grey-el);
+      }
+      &:active {
+        background-color: var(--grey);
+      }
+    }
+  }
+}

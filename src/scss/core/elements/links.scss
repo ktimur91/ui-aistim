@@ -1,0 +1,17 @@
+// Links
+.alink {
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none !important;
+  box-shadow: 0 2px 0 0 var(--primary-l);
+  display: inline-block;
+
+  &:hover {
+    box-shadow: 0 2px 0 0 var(--primary);
+  }
+
+  &:active {
+    color: var(--secondary);
+    box-shadow: 0 2px 0 0 var(--primary-l);
+  }
+}

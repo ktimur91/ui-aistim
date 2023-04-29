@@ -1,0 +1,173 @@
+:root {
+  // Primary
+  --primary: #307df0;
+  --primary-l: #e1edff;
+  --primary-el: #f4f8ff;
+  --primary-d: #4d62ce;
+  --primary-ed: #3c4ea8;
+
+  // Primary:satates
+  --primary-hover: #2d75e0;
+  --primary-active: #2a6dd1;
+  --primary-focus: #2a6dd1;
+
+  // Secondary
+  --secondary: #333;
+  --secondary-l: #444;
+  --secondary-el: #555;
+  --secondary-d: #222;
+  --secondary-ed: #111;
+
+  // Secondary:satates
+  --secondary-hover: #2d75e0;
+  --secondary-active: #2a6dd1;
+  --secondary-focus: #2a6dd1;
+
+  // Link
+  --link: transparent;
+  --link-hover: #f4f8ff;
+  --link-active: #307df0;
+  --link-focus: #2a6dd1;
+
+  // Green
+  --green: #369933;
+  --green-l: #daf2d9;
+  --green-el: #ecf9ec;
+  --green-d: #30862d;
+  --green-ed: #297326;
+
+  // Green:satates
+  --green-hover: #2d75e0;
+  --green-active: #2a6dd1;
+  --green-focus: #2a6dd1;
+
+  // Yellow
+  --yellow: #ffc105;
+  --yellow-l: #fff2cc;
+  --yellow-el: #fff9e5;
+  --yellow-d: #b38600;
+  --yellow-ed: #997300;
+
+  // Yellow:satates
+  --yellow-hover: #2d75e0;
+  --yellow-active: #2a6dd1;
+  --yellow-focus: #2a6dd1;
+
+  // Red
+  --red: #e31c23;
+  --red-l: #f9d2d3;
+  --red-el: #fce8e9;
+  --red-d: #9f1418;
+  --red-ed: #881115;
+
+  // Red:satates
+  --red-hover: #2d75e0;
+  --red-active: #2a6dd1;
+  --red-focus: #2a6dd1;
+
+  // Grey
+  --grey: #EEE;
+  --grey-l: #f5f5f5;
+  --grey-el: #f6f6f6;
+  --grey-d: #DDD;
+  --grey-ed: #999;
+
+  // Grey:satates
+  --grey-hover: #2d75e0;
+  --grey-active: #2a6dd1;
+  --grey-focus: #2a6dd1;
+
+
+  // Base
+  --html: #ddd;
+  --bg: #f9f9f9;
+  --head: #FFF;
+  --toolbar: #FFF;
+  --sidebar: #FFF;
+
+  // Box
+  --box: #FFF;
+  --box-l: #f6f6f6;
+  --box-el: #EEE;
+
+  // Form
+  --form: #FFF;
+  --form-hover: #FFF;
+  --form-active: #FFF;
+  --form-focus: #FFF;
+
+  // Scroll
+  --scroll: #999;
+  --scroll-hover: #555;
+  --scroll-bg: #DDD;
+
+  // Text
+  --text: #333;
+  --text-l: #999;
+  --text-el: #ccc;
+
+  --link: #096DD9;
+  --bcolor: #e6ecf5;
+  --bcolor-d: #D0D5DD;
+
+  // Values
+  --br: 5px;
+  --b1: 1px var(--bcolor) solid;
+  --b1-d: 1px var(--bcolor-d) solid;
+  --bsh: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  --bsh-l: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+  --bsh-el: 0 10px 20px 0 rgba(0, 0, 0, 0.02);
+}
+
+.dark {
+  --head: #222;
+
+  // Box
+  --box: #111;
+  --box-l: #151515;
+  --box-el: #222;
+
+  --toolbar: #333;
+
+  --alert: rgba(255, 255, 255, 0.1);
+  --form: #222;
+  --form-d: #181818;
+  --form-ed: #111;
+  --scroll: #777;
+  --scroll-hover: #999;
+  --scroll-bg: #444;
+
+  --html: #000;
+  --bg: #111;
+
+  // Text
+  --text: #fff;
+  --text-l: #777;
+  --text-el: #555;
+
+  --link: #FFF;
+
+  --bcolor: #222;
+  --bcolor-d: #333;
+
+  --bsh: 0 5px 20px 0 rgba(0, 0, 0, 0.5);
+
+  --grey: #222;
+  --grey-d: #111;
+  --grey-ed: #000;
+  --grey-l: #333;
+  --grey-el: #444;
+
+  // Other styles
+  .tippy {
+    &-box {
+      background-color: #FFF;
+    }
+    &-content {
+      color: #000;
+    }
+    &-arrow {
+      color: #FFF;
+    }
+  }
+}

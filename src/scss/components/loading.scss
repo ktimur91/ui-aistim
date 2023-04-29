@@ -1,0 +1,68 @@
+.base-loading {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2001;
+
+  &.radius {
+    border-radius: var(--br);
+  }
+
+  &__content {
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    height: 100%;
+  }
+
+  // Spin color
+  &.primary svg {
+    stroke: var(--primary);
+  }
+  &.secondary svg {
+    stroke: var(--primary);
+  }
+  &.red svg {
+    stroke: var(--red);
+  }
+  &.yellow svg {
+    stroke: var(--yellow);
+  }
+  &.green svg {
+    stroke: var(--green);
+  }
+  &.white svg {
+    stroke: #FFF;
+  }
+  &.black svg {
+    stroke: #000;
+  }
+  &.text svg {
+    stroke: var(--text);
+  }
+
+  // Background color
+  &.overlay-bg {
+    background-color: var(--bg);
+  }
+  &.overlay-white {
+    background-color: #fff;
+  }
+  &.overlay-white-transparent {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+  }
+  &.overlay-transparent {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+.dark {
+  .base-loading {
+    &.white,
+    &.white-transparent {
+      background-color: var(--box);
+    }
+  }
+}

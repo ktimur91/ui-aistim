@@ -1,0 +1,53 @@
+.form-table-checkbox {
+  width: 20px;
+  height: 20px;
+  background-color: var(--form);
+  border: 0;
+  padding: 0;
+  box-shadow: inset 0 0 0 1px var(--bcolor);
+  border-radius: var(--br);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px var(--primary);
+  }
+
+  &.all {
+    box-shadow: inset 0 0 0 1px var(--primary);
+    background-color: var(--primary);
+  }
+
+  &.partly {
+    box-shadow: inset 0 0 0 1px var(--primary);
+  }
+
+  &__cube {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary);
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+  }
+
+  &.sm {
+    width: 16px;
+    height: 16px;
+    border-radius: calc(var(--br) - 2px);
+
+    & > svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &.sm &__cube {
+    width: 8px;
+    height: 8px;
+    border-radius: calc(var(--br) - 3px);
+  }
+}

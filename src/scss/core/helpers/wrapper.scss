@@ -1,0 +1,152 @@
+// Box
+.box {
+  border-radius: var(--br);
+  background-color: var(--box);
+  border: var(--b1);
+
+  &.no-rad {
+    border-radius: 0;
+  }
+
+  &.no-border {
+    border: 0;
+  }
+
+  &.shadow {
+    box-shadow: var(--bsh);
+  }
+
+  @at-root {
+    &-l {
+      @extend .box;
+      background-color: var(--box-l);
+    }
+
+    &-el {
+      @extend .box;
+      background-color: var(--box-el);
+    }
+  }
+}
+
+// Content
+.content {
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+// Cover images
+.cover {
+  display: flex;
+  background-color: var(--grey-d);
+  overflow: hidden;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &.ava-20 {
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+  }
+
+  &.ava-24 {
+    width: 24px;
+    height: 24px;
+    border-radius: 100px;
+  }
+
+  &.ava-30 {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+  }
+
+  &.ava-40 {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+  }
+
+  &.ava-50 {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+  }
+
+  &.ava-80 {
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+  }
+
+  &.ava-100 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+  }
+
+  &.ava-150 {
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+  }
+
+  &.ava-200 {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+  }
+
+  // Cover item
+  &.item {
+    cursor: pointer;
+    width: calc(33% - 5px);
+    flex: auto;
+
+    & > img {
+      border-radius: 0;
+    }
+
+    &:hover {
+      background-color: #000;
+
+      & > img {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+// Btn group
+.btn-group {
+  .btn {
+    position: relative;
+    z-index: 0;
+    margin: 0 -1px 0 0;
+
+    &:hover {
+      z-index: 1;
+    }
+    // &:first-child {
+    //   border-radius: var(--br) 0 0 var(--br);
+    // }
+    // &:last-child {
+    //   border-radius: 0 var(--br) var(--br) 0;
+    // }
+  }
+
+  &__first.btn {
+    border-radius: var(--br) 0 0 var(--br);
+  }
+  &__last.btn {
+    border-radius: 0 var(--br) var(--br) 0;
+  }
+}

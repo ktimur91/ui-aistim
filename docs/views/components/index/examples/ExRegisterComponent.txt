@@ -1,0 +1,12 @@
+<script setup>
+import { ref } from 'vue'
+import { UiAlert, UiFormInput } from '@telecom/ui-kit/components'
+
+// Data
+const inputValue = ref('')
+</script>
+
+<template>
+  <UiAlert>default</UiAlert>
+  <UiFormInput v-model="inputValue" type="text" placeholder="Type the text" required />
+</template>

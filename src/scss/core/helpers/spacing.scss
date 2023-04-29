@@ -1,0 +1,74 @@
+$directions:(left : 'l', right : 'r', top : 't', bottom : 'b');
+$sizes:('auto', 0, 5, 10, 15, 20, 30, 40, 50);
+
+// Padding
+.p {
+  @each $size in $sizes {
+    @if $size=='auto' {
+      &-#{$size} {
+        padding: #{$size};
+      }
+    }
+
+    @else {
+      &-#{$size} {
+        padding: $size + px !important;
+      }
+    }
+  }
+
+  @each $key,
+  $value in $directions {
+    &#{$value} {
+      @each $size in $sizes {
+        @if $size=='auto' {
+          &-#{$size} {
+            padding-#{$key}: #{$size};
+          }
+        }
+
+        @else {
+          &-#{$size} {
+            padding-#{$key}: $size + px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Margin
+.m {
+  @each $size in $sizes {
+    @if $size=='auto' {
+      &-#{$size} {
+        margin: #{$size};
+      }
+    }
+
+    @else {
+      &-#{$size} {
+        margin: $size + px !important;
+      }
+    }
+  }
+
+  @each $key,
+  $value in $directions {
+    &#{$value} {
+      @each $size in $sizes {
+        @if $size=='auto' {
+          &-#{$size} {
+            margin-#{$key}: #{$size};
+          }
+        }
+
+        @else {
+          &-#{$size} {
+            margin-#{$key}: $size + px !important;
+          }
+        }
+      }
+    }
+  }
+}

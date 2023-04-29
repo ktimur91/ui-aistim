@@ -1,0 +1,13 @@
+.textarea {
+  max-height: 200px;
+  overflow: auto;
+
+  &__input {
+    width: 100%;
+    resize: none;
+    border: 0;
+    background-color: transparent;
+    margin: 6px 0 5px;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,102 @@
+// Tag
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--grey);
+  border-radius: 4px;
+  padding: 0 6px;
+  height: 20px;
+  font-size: 12px;
+
+  // Modificators
+  &.rounded {
+    border-radius: 100px;
+  }
+
+  // Sizes
+  &.sm {
+    padding: 0 4px;
+    height: 16px;
+    font-size: 11px;
+  }
+  &.md {
+    padding: 0 6px;
+    height: 20px;
+  }
+  &.lg {
+    padding: 0 8px;
+    height: 24px;
+    font-size: 14px;
+  }
+  &--btn.lg {
+    padding: 0 2px 0 8px;
+  }
+
+  // Colors
+  &.secondary {
+    background-color: var(--secondary);
+    color: #FFF;
+  }
+
+  &.white {
+    background-color: #FFF;
+    color: var(--grey-ed);
+  }
+  &.white-box {
+    border: var(--b1);
+    background-color: #FFF;
+    color: #555;
+  }
+
+  &.primary {
+    background-color: var(--primary);
+    color: #FFF;
+  }
+  &.primary-light {
+    background-color: var(--primary-l);
+    color: var(--text);
+  }
+  &.primary-extra-light {
+    background-color: var(--primary-el);
+    color: var(--primary);
+  }
+
+  &.yellow {
+    background-color: var(--yellow);
+    color: #FFF;
+  }
+  &.yellow-light {
+    background-color: var(--yellow-el);
+    color: #000;
+  }
+
+  &.green {
+    background-color: var(--green);
+    color: #FFF;
+  }
+  &.green-light {
+    background-color: var(--green-el);
+    color: var(--green);
+  }
+
+  &.red {
+    background-color: var(--red);
+    color: #FFF;
+  }
+  &.red-light {
+    background-color: var(--red-el);
+    color: var(--red);
+  }
+
+  &.grey {
+    background-color: var(--grey);
+    color: var(--text);
+  }
+
+  &.grey-dark {
+    background-color: var(--grey-d);
+    color: var(--text);
+  }
+}

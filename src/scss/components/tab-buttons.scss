@@ -1,0 +1,57 @@
+.tab-buttons {
+  height: 34px;
+  overflow: hidden;
+  width: max-content;
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &.sm {
+    height: 28px;
+  }
+
+  &.md {
+    height: 34px;
+  }
+
+  &.lg {
+    height: 48px;
+  }
+
+  &.no-border {
+    border: 0;
+  }
+
+  &__item {
+    background-color: transparent;
+    border: 0;
+    height: 100%;
+    color: #999;
+    cursor: pointer;
+    border-right: var(--b1);
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    &:hover {
+      color: var(--text);
+      background-color: var(--grey-el);
+    }
+
+    &.active {
+      color: #000;
+      background-color: var(--grey);
+
+      svg {
+        fill: var(--primary);
+      }
+    }
+  }
+
+  &.lg &__item.active {
+    font-weight: bold;
+    font-size: 110%;
+  }
+}

@@ -1,0 +1,12 @@
+// Overflow
+.of {
+  &-h {
+    overflow: hidden;
+  }
+  &-s {
+    overflow: scroll;
+  }
+  &-a {
+    overflow: auto;
+  }
+}

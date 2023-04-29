@@ -1,0 +1,59 @@
+.toast__item {
+  background-color: var(--box);
+  position: relative;
+  overflow: hidden;
+  width: 350px;
+  $item: &;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 5px;
+    background-color: var(--primary);
+  }
+
+  &-icon > svg {
+    fill: var(--primary);
+  }
+
+  &-close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 1;
+  }
+
+  &.yellow {
+    &::before {
+      background-color: var(--yellow);
+    }
+
+    #{$item}-icon > svg {
+      fill: var(--yellow);
+    }
+  }
+
+  &.red {
+    &::before {
+      background-color: var(--red);
+    }
+
+    #{$item}-icon > svg {
+      fill: var(--red);
+    }
+  }
+
+  &.green {
+    &::before {
+      background-color: var(--green);
+    }
+
+    #{$item}-icon > svg {
+      fill: var(--green);
+    }
+  }
+}

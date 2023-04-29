@@ -1,0 +1,203 @@
+.table {
+  $parent: &;
+  background-color: var(--box);
+  padding: 0;
+  border-collapse: collapse;
+
+  &__head,
+  &__foot {
+    height: 30px;
+  }
+
+  &__cell {
+    padding: 0 10px;
+    height: 40px;
+
+    &.right {
+      text-align: right;
+      justify-content: flex-end;
+    }
+
+    &:last-child {
+      padding-right: 30px;
+    }
+  }
+
+  &__checkbox {
+    width: 30px;
+    padding: 0;
+    // opacity: 0;
+  }
+
+  &__head {
+    top: 0;
+    background-color: var(--box);
+    border-radius: var(--br) var(--br) 0 0;
+    box-shadow: 0 1px 0 0 var(--bcolor);
+
+    &-cell {
+      padding: 0;
+      height: 30px;
+
+      &-btn {
+        font-size: 12px;
+        padding: 0 10px;
+        border: 0;
+        border-radius: var(--br);
+        background-color: var(--box);
+        height: 24px;
+        color: var(--text-l);
+        font-weight: bold;
+        
+        &-icon {
+          width: 20px;
+          height: 20px;
+          filter: grayscale(1);
+          opacity: 0;
+        }
+
+        &.active &-icon {
+          filter: grayscale(0);
+          opacity: 1;
+        }
+
+        &.right {
+          & > span {
+            &:nth-child(1) {
+              order: 1;
+            }
+            &:nth-child(2) {
+              order: 0;
+            }
+          }
+        }
+
+        &:hover {
+          background-color: var(--box-l);
+          color: var(--text);
+        }
+
+        &:hover &-icon {
+          opacity: 1;
+        }
+
+        &:active {
+          background-color: var(--box-el);
+        }
+
+        &.active {
+          color: var(--text);
+        }
+
+        &-sort {
+          opacity: 0;
+          filter: grayscale(1);
+        }
+
+        &.active &-sort,
+        &:hover &-sort {
+          opacity: 1;
+        }
+
+        &.active &-sort {
+          filter: grayscale(0);
+        }
+      }
+    }
+
+    &:hover #{$parent}__checkbox,
+    #{$parent}__checkbox.selected {
+      opacity: 1;
+    }
+  }
+
+  &__row {
+    &:hover {
+      z-index: 2;
+      background-color: var(--primary-el);
+      box-shadow: 0 1px 0 0 var(--primary-l), 0 -1px 0 0 var(--primary-l);
+    }
+
+    &.selected {
+      background-color: var(--primary-el);
+    }
+
+    &.visited {
+      z-index: 1;
+      background-color: var(--primary-l);
+      box-shadow: 0 1px 0 0 var(--primary-l), 0 -1px 0 0 var(--primary-l);
+    }
+
+    &.delete {
+      z-index: 1;
+      background-color: var(--red-el);
+      box-shadow: 0 1px 0 0 var(--red-l), 0 -1px 0 0 var(--red-l);
+    }
+
+    &:hover #{$parent}__checkbox,
+    &.selected #{$parent}__checkbox {
+      opacity: 1;
+    }
+  }
+
+  &__body.no-footer &__body-row {
+    &:last-child {
+      border-radius: 0 0 var(--br) var(--br);
+    }
+  }
+
+  &__actions {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+
+    &-overlay {
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 700px;
+      background: linear-gradient(45deg, transparent, var(--primary-el));
+      pointer-events: none;
+    }
+  }
+
+  &__row:hover &__actions,
+  &__row.delete &__actions {
+    opacity: 1;
+  }
+
+  &__row.delete &__actions-overlay {
+    background: linear-gradient(45deg, transparent, var(--red-l));
+  }
+
+  &__foot {
+    bottom: 0;
+    background-color: var(--box);
+    border-radius: 0 0 var(--br) var(--br);
+    box-shadow: 0 -1px 0 0 var(--bcolor);
+  }
+}
+
+.base-table {
+  &__toolbar {
+    height: 50px;
+    background-color: var(--box);
+    border-radius: var(--br) var(--br) 0 0;
+    top: 0;
+  }
+
+  &__wrapper {
+    min-height: 200px;
+  }
+
+  &__pagination {
+    background-color: var(--box);
+    border-radius: 0 0 var(--br) var(--br);
+    bottom: 0;
+  }
+}
+
+.base-table__filter {
+  width: 300px;
+}

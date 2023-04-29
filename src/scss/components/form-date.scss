@@ -1,0 +1,20 @@
+.mx-input {
+  border-radius: var(--br) !important;
+  border-color: var(--bcolor) !important;
+  box-shadow: none !important;
+  font-size: inherit !important;
+
+  &:hover,
+  &:focus {
+    border-color: var(--primary) !important;
+  }
+}
+
+.mx-datepicker {
+  width: auto !important;
+}
+
+.mx-datepicker-popup,
+.mx-calendar-content .cell.active {
+  border-radius: var(--br);
+}

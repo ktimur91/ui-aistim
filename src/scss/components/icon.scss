@@ -1,0 +1,32 @@
+.icon {
+  &.black {
+    fill: #000;
+  }
+  &.grey {
+    fill: #6f7985;
+  }
+  &.grey-l {
+    fill: #999;
+  }
+  &.grey-el {
+    fill: #CCC;
+  }
+  &.white {
+    fill: #fff;
+  }
+  &.primary {
+    fill: var(--primary);
+  }
+  &.secondary {
+    fill: var(--secondary);
+  }
+  &.red {
+    fill: var(--red);
+  }
+  &.yellow {
+    fill: var(--yellow);
+  }
+  &.green {
+    fill: var(--green);
+  }
+}

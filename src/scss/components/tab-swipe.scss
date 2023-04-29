@@ -1,0 +1,40 @@
+.tab-swipe {
+  min-height: 50px;
+  border-bottom: 2px var(--bcolor) solid;
+
+  &.no-border {
+    border: 0;
+  }
+
+  &__item {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    color: #999;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:hover {
+      color: var(--text);
+    }
+
+    & > .tag {
+      background-color: var(--grey-ed);
+    }
+
+    &.active {
+      color: var(--text);
+      box-shadow: 0 2px 0 0 var(--primary);
+
+      svg {
+        fill: var(--primary);
+      }
+
+      & > .tag {
+        background-color: var(--primary);
+      }
+    }
+  }
+}

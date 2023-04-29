@@ -1,0 +1,93 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: var(--html);
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+body {
+  font-size: 14px;
+}
+
+p {
+  line-height: 24px;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  border-bottom: var(--b1);
+
+  &.dark {
+    border-color: var(--b1-d);
+  }
+}
+
+input,
+select,
+textarea,
+button {
+  color: var(--text);
+  font-size: inherit;
+
+  &::-webkit-input-placeholder {
+    color:    #CCC;
+  }
+  &:-moz-placeholder {
+    color:    #CCC;
+    opacity:  1;
+  }
+  &::-moz-placeholder {
+    color:    #CCC;
+    opacity:  1;
+  }
+  &:-ms-input-placeholder {
+    color:    #CCC;
+  }
+  &::-ms-input-placeholder {
+    color:    #CCC;
+  }
+  &::placeholder {
+    color:    #CCC;
+  }
+
+  &:disabled {
+    color: #777;
+  }
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: var(--primary-d);
+    text-decoration: none;
+  }
+}
+
+* {
+  font-family: 'Roboto', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none;
+}

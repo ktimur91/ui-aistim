@@ -1,0 +1,16 @@
+// Width
+.w {
+  &-100pr {
+    width: 100% !important;
+  }
+
+  &-100vw {
+    width: 100vw !important;
+  }
+
+  @for $i from 3 to 7 {
+    &-#{$i * 100} {
+      width: #{$i * 100}px;
+    }
+  }
+}

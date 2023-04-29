@@ -1,0 +1,50 @@
+.form-item {
+  .toggle-password {
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 26px;
+    padding: 0;
+  }
+
+  .search-icon {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+  }
+
+  &.sm .search-icon {
+    width: 28px;
+  }
+  &.sm &__input.search {
+    padding: 0 10px 0 28px;
+  }
+  &.sm {
+    .toggle-password {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &.md .search-icon {
+    width: 34px;
+  }
+  &.md &__input.search {
+    padding: 0 15px 0 34px;
+  }
+
+  &.lg .search-icon {
+    width: 48px;
+  }
+  &.lg &__input.search {
+    padding: 0 10px 0 48px;
+  }
+  &.lg {
+    .toggle-password {
+      width: 38px;
+      height: 38px;
+    }
+  }
+}

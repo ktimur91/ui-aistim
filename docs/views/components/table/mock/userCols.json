@@ -1,0 +1,32 @@
+[
+  {
+    "key": "id",
+    "name": "#",
+    "hasSort": true,
+    "active": true
+  },
+  {
+    "key": "fullName",
+    "name": "Пользователь",
+    "hasSort": true,
+    "active": true
+  },
+  {
+    "key": "position",
+    "name": "Должность",
+    "hasSort": false,
+    "active": true
+  },
+  {
+    "key": "age",
+    "name": "Возраст",
+    "hasSort": false,
+    "active": true
+  },
+  {
+    "key": "registrationDate",
+    "name": "Дата регистрации",
+    "hasSort": true,
+    "active": true
+  }
+]

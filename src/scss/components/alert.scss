@@ -1,0 +1,54 @@
+.base-alert {
+  border: 1px var(--bcolor) solid;
+  border-radius: var(--br);
+  background-color: var(--alert);
+  color: var(--text);
+
+  &__message {
+    padding-top: 2px;
+  }
+
+  &.primary {
+    // color: var(--primary);
+    border-color: var(--primary);
+    background-color: var(--primary-el);
+
+    svg {
+      fill: var(--primary);
+    }
+  }
+
+  &.red {
+    // color: var(--red);
+    border-color: var(--red);
+    background-color: var(--red-el);
+
+    svg {
+      fill: var(--red);
+    }
+  }
+
+  &.yellow {
+    // color: var(--yellow);
+    border-color: var(--yellow);
+    background-color: var(--yellow-el);
+
+    svg {
+      fill: var(--yellow);
+    }
+  }
+
+  &.green {
+    // color: var(--green);
+    border-color: var(--green);
+    background-color: var(--green-el);
+
+    svg {
+      fill: var(--green);
+    }
+  }
+
+  // &__message {
+  //   padding-top: 2px;
+  // }
+}

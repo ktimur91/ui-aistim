@@ -1,0 +1,63 @@
+{
+  "name": "ui-aistim",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./components": {
+      "import": "./dist/components.js"
+    },
+    "./plugins": {
+      "import": "./dist/plugins.js"
+    },
+    "./css/ui-aistim.css": "./dist/css/ui-aistim.css"
+  },
+  "scripts": {
+    "dev": "vite --config vite.config-docs.js",
+    "build:js": "vite build",
+    "build:scss": "mkdirp dist/css && sass src/scss/ui-aistim.scss | node build/banner.cjs > dist/css/ui-aistim.css && cleancss -o dist/css/ui-aistim.min.css dist/css/ui-aistim.css",
+    "build:lib": "rimraf dist && npm run build:js && npm run build:scss",
+    "build:docs": "vite build --config vite.config-docs.js",
+    "build": "npm run build:lib && npm run build:docs",
+    "lint": "eslint --ext .js,.vue,.jsx,.cjs,.mjs --ignore-path .gitignore .",
+    "lintfix": "npm run lint -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@gitlab.bca.kz:11111/telecom/npm/ui-aistim.git"
+  },
+  "author": "timur, aisultan",
+  "license": "ISC",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "dependencies": {
+    "click-outside-vue3": "^4.0.1",
+    "dayjs": "^1.11.7",
+    "lodash": "^4.17.21",
+    "vue": "^3.2.47",
+    "vue-3-mask": "^0.0.1-alpha",
+    "vue-datepicker-next": "^1.0.2",
+    "vue-router": "^4.1.6",
+    "vue-tippy": "^6.0.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "axios": "^1.3.5",
+    "axios-mock-adapter": "^1.21.4",
+    "clean-css-cli": "^5.6.2",
+    "eslint": "^8.36.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "highlight.js": "^11.7.0",
+    "mkdirp": "^2.1.5",
+    "prettier": "^2.8.4",
+    "rimraf": "^4.4.0",
+    "sass": "^1.59.2",
+    "vite": "^4.1.4"
+  }
+}

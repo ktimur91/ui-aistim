@@ -1,0 +1,19 @@
+// Border
+.b {
+  &-t {
+    border-top: var(--b1);
+  }
+  &-b {
+    border-bottom: var(--b1);
+  }
+  &-l {
+    border-left: var(--b1);
+  }
+  &-r {
+    border-right: var(--b1);
+  }
+
+  &-rad {
+    border-radius: var(--br);
+  }
+}
