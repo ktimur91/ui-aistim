@@ -20,6 +20,10 @@ const props = defineProps({
     type: String,
     default: 'btn link sm w-100pr'
   },
+  triggerClass: {
+    type: String,
+    default: ''
+  },
   appendToBody: {
     type: Boolean,
     default: false
@@ -168,7 +172,8 @@ function removeItem(val) {
           error: isError,
           placeholder: !hasSelected
         },
-        size
+        size,
+        triggerClass
       ]"
       :position-y="positionY"
       :append-to-body="appendToBody"
@@ -229,11 +234,3 @@ function removeItem(val) {
     </UiDropdown>
   </div>
 </template>
-
-<style lang="scss">
-.form-autocomplete {
-  &__list {
-    max-height: 300px;
-  }
-}
-</style>
