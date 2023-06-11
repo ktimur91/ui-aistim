@@ -190,8 +190,10 @@ function removeItem(val) {
           </template>
         </div>
         <template v-else>
-          {{ propValue && propValue.text ? propValue.text : placeholder }}
-          <UiIcon icon="chevron-down" color="grey" size="14" />
+          <slot name="trigger" :selected="propValue">
+            {{ propValue && propValue.text ? propValue.text : placeholder }}
+            <UiIcon icon="chevron-down" color="grey" size="14" />
+          </slot>
         </template>
       </template>
 
