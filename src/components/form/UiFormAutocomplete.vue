@@ -28,6 +28,13 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
+  bodyWidth: {
+    type: String,
+    default: 'trigger-width',
+    validator(value) {
+      return ['auto', 'trigger-width'].includes(value)
+    }
+  },
   positionY: {
     type: String,
     default: 'auto'
@@ -74,7 +81,9 @@ const props = defineProps({
 const {
   items,
   itemClass,
+  triggerClass,
   appendToBody,
+  bodyWidth,
   positionY,
   label,
   placeholder,
@@ -177,6 +186,7 @@ function removeItem(val) {
       ]"
       :position-y="positionY"
       :append-to-body="appendToBody"
+      :body-width="bodyWidth"
       body-class="p-0"
       @opened="setFocus"
     >
