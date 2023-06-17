@@ -138,7 +138,7 @@ defineExpose({
       ref="inputRef"
       :type="currentType"
       :name="'form-item-' + uid"
-      class="form-item__input w-100pr"
+      class="form-item__input w-100pr mask-input"
       :class="type"
       :placeholder="placeholder"
       :required="required"
