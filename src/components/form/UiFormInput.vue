@@ -1,5 +1,6 @@
 <script setup>
-import { MaskInput } from 'vue-3-mask'
+// import { MaskInput } from 'vue-3-mask'
+import { mask } from 'vue-the-mask'
 import { getCurrentInstance, toRefs, computed, ref } from 'vue'
 import UiIcon from '../icons/UiIcon.vue'
 
@@ -20,9 +21,9 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
-  mask: {
+  maskStr: {
     type: String,
-    default: '+7 (###) ###-##-##'
+    default: '(###) ###-##-##'
   },
   size: {
     type: String,
@@ -63,10 +64,11 @@ const props = defineProps({
 })
 
 // Data
-const { label, type, placeholder, hasMask, mask, required, minlength, maxlength, modelValue } = toRefs(props)
+const { label, type, placeholder, hasMask, maskStr, required, minlength, maxlength, modelValue } = toRefs(props)
 const uid = getCurrentInstance().uid
 const currentType = ref(props.type)
 const inputRef = ref()
+const vMask = mask
 
 // Computed
 const propValue = computed({
@@ -91,9 +93,9 @@ function setCurrentType() {
 function setFocus() {
   inputRef.value.focus()
 }
-function checkLength(e) {
-  propValue.value = e.target.value
-}
+// function checkLength(e) {
+//   propValue.value = e.target.value
+// }
 
 // Expose
 defineExpose({
@@ -117,7 +119,7 @@ defineExpose({
       </small>
     </div>
 
-    <MaskInput
+    <!-- <MaskInput
       v-if="hasMask"
       ref="inputRef"
       class="form-item__input w-100pr"
@@ -130,6 +132,21 @@ defineExpose({
       :mask="mask"
       @input="checkLength"
       v-model="propValue"
+    /> -->
+    <input
+      v-if="hasMask"
+      ref="inputRef"
+      :type="currentType"
+      :name="'form-item-' + uid"
+      class="form-item__input w-100pr"
+      :class="type"
+      :placeholder="placeholder"
+      :required="required"
+      :disabled="disabled"
+      :autocomplete="autocomplete"
+      v-mask="maskStr"
+      v-model="propValue"
+      @focus="emits('focused')"
     />
     <div v-else class="pos-r">
       <input

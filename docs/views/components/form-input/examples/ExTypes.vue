@@ -20,7 +20,7 @@ const items = [
 ]
 const formData = ref([
   {
-    phone: ''
+    phone: '7778404341'
   }
 ])
 
@@ -57,7 +57,7 @@ function addPhone() {
     <UiFormInput placeholder="password" type="password" :size="currentTab" />
     <UiFormInput placeholder="search" type="search" :size="currentTab" />
     <hr class="mt-20 mb-20" />
-    
+
     <template v-for="(el, index) of formData" :key="index">
       <div v-if="formData.length > 1" class="p-20">
         <UiFormInput placeholder="+7 (___) ___-__-__" has-mask type="tel" :size="currentTab" v-model="el.phone" />
