@@ -93,8 +93,12 @@ function setHeight() {
       <!-- Content -->
       <div
         :id="'modal__content-' + uid"
-        class="modal__content grid gtr-auto-1-auto"
-        :class="[props.size, contentClass]"
+        class="modal__content grid"
+        :class="[
+          props.size,
+          contentClass,
+          { 'gtr-auto-1-auto': props.isHead && props.isFoot, 'gtr-auto-1': props.isHead, 'gtr-1-auto': props.isFoot }
+        ]"
       >
         <!-- Head -->
         <div v-if="props.isHead" class="modal__content-header grid gtc-1-auto ggap-20 ai-c pl-20 pr-20 pt-15 pb-15">
